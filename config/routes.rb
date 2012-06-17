@@ -1,4 +1,12 @@
 Untitled2::Application.routes.draw do
+  get "session/login", :as => :login
+
+  get "session/logout", :as => :logout
+
+  post "session/auth", :as => :auth
+
+  get "session/token_auth", :as => :token_auth
+
   resources :locations
 
   resources :users

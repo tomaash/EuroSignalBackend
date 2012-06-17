@@ -18,7 +18,7 @@
     <td><%= location.lng %></td>
     <td><%= location.acc %></td>
     <td><%= location.time %></td>
-    <td><%= location.user_id %></td>
+    <td><%= location.user ? location.user.login : "N/A" %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, confirm: 'Are you sure?', method: :delete %></td>

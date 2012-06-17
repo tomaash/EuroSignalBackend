@@ -1,5 +1,6 @@
 
 class LocationsController < ApplicationController
+  before_filter :require_user
   # GET /locations
   # GET /locations.json
   def index
@@ -43,7 +44,7 @@ class LocationsController < ApplicationController
   def create
     p params
     @location = Location.new(params[:location])
-
+    @location.user = current_user
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }

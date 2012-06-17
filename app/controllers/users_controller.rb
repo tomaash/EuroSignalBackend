@@ -1,5 +1,7 @@
 
 class UsersController < ApplicationController
+  before_filter :require_user
+
   # GET /users
   # GET /users.json
   def index
@@ -45,7 +47,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to users_path, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
