@@ -6,6 +6,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_salt
       t.string :first_name
       t.string :last_name
+      t.integer :current_task_id
+      t.integer :role_id
       t.string :persistence_token
       t.string    :single_access_token, :null => false                # optional, see Authlogic::Session::Params
       t.string    :perishable_token,    :null => false                # optional, see Authlogic::Session::Perishability

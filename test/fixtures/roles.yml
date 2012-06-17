@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+r1:
+  name: User
+  code: user
+
+r2:
+  name: Admin
+  code: admin

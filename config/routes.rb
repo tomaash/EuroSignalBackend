@@ -1,4 +1,7 @@
 Untitled2::Application.routes.draw do
+
+  resources :roles
+
   get "session/login", :as => :login
 
   get "session/logout", :as => :logout
@@ -6,6 +9,14 @@ Untitled2::Application.routes.draw do
   post "session/auth", :as => :auth
 
   get "session/token_auth", :as => :token_auth
+
+  resources :task_statuses
+
+  resources :task_notes
+
+  resources :task_states
+
+  resources :tasks
 
   resources :locations
 

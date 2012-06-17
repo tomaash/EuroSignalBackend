@@ -1,13 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  login: MyString
-  password: MyString
-  first_name: MyString
-  last_name: MyString
+u1:
+  login: tom
+  crypted_password: 368324435d7bb6adf5c8bb7a937703ce3ac1d4a94b07b57326d91f349698e2a1d2302ede602ed8012d7d3163120de2c1b40f6d4897ce3a0b92b60247ed948038
+  password_salt: 6jw6l1GW3fZsUjcbI3
+  persistence_token: f8dc2ed7de12151115729cc6f8cb470a0814192ef0df44fbd06095c5064a57b53effb08199c6c144797aa0607c1ca18e5c387dd602bb8ffb2777ec4ceff59a13
+  single_access_token: 4uSdelrrEnZwGDf8LM
+  perishable_token: MsDwuzJAjfZE2taQ98w
+  first_name: Tomas
+  last_name: Holas
+  role: r1
 
-two:
-  login: MyString
-  password: MyString
-  first_name: MyString
-  last_name: MyString
+u2:
+  login: steve
+  crypted_password: 368324435d7bb6adf5c8bb7a937703ce3ac1d4a94b07b57326d91f349698e2a1d2302ede602ed8012d7d3163120de2c1b40f6d4897ce3a0b92b60247ed948038
+  password_salt: 6jw6l1GW3fZsUjcbI3
+  single_access_token: 4uSdelrrEnZwGDf8LM
+  persistence_token: f8dc2ed7de12151115729cc6f8cb470a0814192ef0df44fbd06095c5064a57b53effb08199c6c144797aa0607c1ca18e5c387dd602bb8ffb2777ec4ceff59a13
+  perishable_token: MsDwuzJAjfZE2taQ98w
+  first_name: Steve
+  last_name: Jobs
+  role: r2

@@ -27,6 +27,20 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_admin
+    unless (current_user && current_user.has_role?('admin'))
+      respond_to do |format|
+        format.html {
+          flash[:notice] = "You must be admin to access this page"
+          redirect_to login_url
+        }
+        format.json { render json: {:status => 'Admin required'}, status: :forbidden }
+      end
+      return false
+    end
+  end
+
+
   def require_no_user
     if current_user
       #store_location

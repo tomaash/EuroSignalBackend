@@ -36,6 +36,22 @@
       <br/>
       <%= f.text_field :last_name %>
     </div>
+
+    <div class="field">
+      <%= f.label :role %>
+      <br/>
+      <%= f.select :role_id, Role.all_for_select %>
+    </div>
+
+
+    <% if @user.id %>
+    <div class="field">
+      <%= f.label :current_task %>
+      <br/>
+      <%= f.select :current_task_id, Task.user_for_select(@user.id) %>
+    </div>
+    <% end %>
+
     <div class="actions">
       <%= f.submit %>
     </div>

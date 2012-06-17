@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+ts1:
+  name: New
+
+ts2:
+  name: In Progress
+
+ts3:
+  name: Done

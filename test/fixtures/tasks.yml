@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+t1:
+  start_date: 2012-06-17 19:17:14
+  due_date: 2012-06-17 19:17:14
+  owner: Someone
+  user: u1
+  client: Client1
+  description: Just do something
+
+t2:
+  start_date: 2012-06-17 19:17:14
+  due_date: 2012-06-17 19:17:14
+  owner: Someone2
+  user: u2
+  client: Client2
+  description: Just do something else

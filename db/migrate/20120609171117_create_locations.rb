@@ -6,6 +6,7 @@ class CreateLocations < ActiveRecord::Migration
       t.float :acc
       t.datetime :time
       t.integer :user_id
+      t.integer :task_id
 
       t.timestamps
     end
