@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+n1:
   user: u2
   task: t1
   owner: MyString
   title: MyString
   content: MyText
 
-two:
+n2:
   user: u2
   task: t2
   owner: MyString

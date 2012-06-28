@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
                   :current_task_id, :role_id
   acts_as_authentic
   has_many :locations
-  belongs_to :current_task, :class_name => 'task', :foreign_key => "current_task_id"
+  belongs_to :current_task, :class_name => 'Task', :foreign_key => "current_task_id"
   belongs_to :role
 
   def self.all_for_select

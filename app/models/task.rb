@@ -1,9 +1,9 @@
 class Task < ActiveRecord::Base
-  attr_accessible :name, :client, :description, :due_date, :owner, :start_date, :user_id, :task_state_id
+  attr_accessible :name, :client, :description, :due_date, :owner, :start_date, :user_id, :state_id
   belongs_to :user
-  belongs_to :task_state
-  has_many :task_statuses
-  has_many :task_notes
+  belongs_to :state
+  has_many :statuses
+  has_many :notes
   has_many :locations
 
   def self.all_for_select

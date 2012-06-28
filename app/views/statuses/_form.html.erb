@@ -11,9 +11,15 @@
     </div>
   <% end %>
 
+
+    <div class="field">
+      <%= f.label :task %><br />
+      <%= f.select :task_id, Task.all_for_select %>
+    </div>
+
     <div class="field">
       <%= f.label :state %><br />
-      <%= f.select :task_state_id, TaskState.all_for_select %>
+      <%= f.select :state_id, State.all_for_select %>
     </div>
 
   <div class="field">

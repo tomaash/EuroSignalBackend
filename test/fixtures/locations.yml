@@ -5,6 +5,7 @@ one:
   lng: 1.5
   acc: 1.5
   time: 2012-06-09 18:59:24
+  address: Praha
   user: u1
   task: t1
 
@@ -13,5 +14,6 @@ two:
   lng: 1.5
   acc: 1.5
   time: 2012-06-09 18:59:24
+  address: Brno
   user: u1
   task: t2

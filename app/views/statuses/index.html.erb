@@ -1,8 +1,9 @@
-<h1>Listing task_statuses</h1>
+<h1>Listing Statuses</h1>
 
 <table>
   <tr>
-    <th>Task state</th>
+    <th>Task</th>
+    <th>State</th>
     <th>Comment</th>
     <th></th>
     <th></th>
@@ -11,10 +12,11 @@
 
 <% @task_statuses.each do |task_status| %>
   <tr>
-    <td><%= task_status.task_state ? task_status.task_state.name : "N/A" %></td>
+    <td><%= task_status.task ? task_status.task.name : "N/A" %></td>
+    <td><%= task_status.state ? task_status.state.name : "N/A" %></td>
     <td><%= task_status.comment %></td>
     <td><%= link_to 'Show', task_status %></td>
-    <td><%= link_to 'Edit', edit_task_status_path(task_status) %></td>
+    <td><%= link_to 'Edit', edit_status_path(task_status) %></td>
     <td><%= link_to 'Destroy', task_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -22,4 +24,4 @@
 
 <br />
 
-<%= link_to 'New Task status', new_task_status_path %>
+<%= link_to 'New Status', new_status_path %>

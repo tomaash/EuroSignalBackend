@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120617191828) do
+ActiveRecord::Schema.define(:version => 20120627164018) do
 
   create_table "locations", :force => true do |t|
     t.float    "lat"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(:version => 20120617191828) do
     t.datetime "time"
     t.integer  "user_id"
     t.integer  "task_id"
+    t.string   "address"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "notes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "task_id"
+    t.string   "owner"
+    t.string   "title"
+    t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -31,28 +42,19 @@ ActiveRecord::Schema.define(:version => 20120617191828) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "task_notes", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "task_id"
-    t.string   "owner"
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "task_states", :force => true do |t|
+  create_table "states", :force => true do |t|
     t.string   "name"
+    t.string   "code"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "task_statuses", :force => true do |t|
-    t.integer  "task_state_id"
+  create_table "statuses", :force => true do |t|
+    t.integer  "state_id"
     t.integer  "task_id"
     t.text     "comment"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "tasks", :force => true do |t|
@@ -61,11 +63,11 @@ ActiveRecord::Schema.define(:version => 20120617191828) do
     t.datetime "due_date"
     t.string   "owner"
     t.integer  "user_id"
-    t.integer  "task_state_id"
+    t.integer  "state_id"
     t.string   "client"
     t.text     "description"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

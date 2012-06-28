@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration
       t.datetime :due_date
       t.string :owner
       t.integer :user_id
-      t.integer :task_state_id
+      t.integer :state_id
       t.string :client
       t.text :description
 

@@ -1,10 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-ts1:
+s1:
   name: New
+  code: new
 
-ts2:
+s2:
   name: In Progress
+  code: progress
 
-ts3:
+s3:
+  name: Paused
+  code: paused
+
+
+s4:
   name: Done
+  code: done

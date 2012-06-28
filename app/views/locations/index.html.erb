@@ -7,6 +7,8 @@
     <th>Acc</th>
     <th>Time</th>
     <th>User</th>
+    <th>Task</th>
+    <th>Address</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +21,8 @@
     <td><%= location.acc %></td>
     <td><%= location.time %></td>
     <td><%= location.user ? location.user.login : "N/A" %></td>
+    <td><%= location.task ? location.task.name : "N/A" %></td>
+    <td><%= location.address %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, confirm: 'Are you sure?', method: :delete %></td>

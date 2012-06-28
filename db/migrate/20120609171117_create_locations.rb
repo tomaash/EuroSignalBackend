@@ -7,7 +7,7 @@ class CreateLocations < ActiveRecord::Migration
       t.datetime :time
       t.integer :user_id
       t.integer :task_id
-
+      t.string :address
       t.timestamps
     end
   end

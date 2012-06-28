@@ -8,7 +8,7 @@ class TaskNotesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:task_notes)
+    assert_not_nil assigns(:notes)
   end
 
   test "should get new" do

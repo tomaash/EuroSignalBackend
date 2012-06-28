@@ -1,4 +1,4 @@
-<h1>Listing task_notes</h1>
+<h1>Listing Notes</h1>
 
 <table>
   <tr>
@@ -18,7 +18,7 @@
     <td><%= task_note.title %></td>
     <td><%= task_note.content %></td>
     <td><%= link_to 'Show', task_note %></td>
-    <td><%= link_to 'Edit', edit_task_note_path(task_note) %></td>
+    <td><%= link_to 'Edit', edit_note_path(task_note) %></td>
     <td><%= link_to 'Destroy', task_note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -26,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Task note', new_task_note_path %>
+<%= link_to 'New note', new_note_path %>

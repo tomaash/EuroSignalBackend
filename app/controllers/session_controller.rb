@@ -43,9 +43,10 @@ class SessionController < ApplicationController
           redirect_back_or_default locations_path
         }
 
-        format.json {
+        format.json do
           reset_token(@user_session.record)
-          render json: @user_session.record.single_access_token }
+          render json: @user_session.record.to_json(:include => :current_task)
+        end
       else
         format.html { render :action => :login }
         format.json { render json: @user_session.errors, status: :forbidden }

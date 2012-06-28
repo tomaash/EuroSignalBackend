@@ -3,16 +3,18 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
+    p params
     if current_user.has_role?('admin')
       @tasks = Task.all
     else
-      @tasks = Task.find_all_by_user_id(current_user.id)
+      @tasks = Task.where(:user_id => current_user.id)
+      #find_all_by_user_id(current_user.id)
     end
 
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tasks }
+      format.json { render json: @tasks.to_json(:include => [:notes,:statuses,:state]) }
     end
   end
 

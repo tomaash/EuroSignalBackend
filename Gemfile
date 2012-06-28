@@ -9,6 +9,7 @@ gem 'sqlite3', '1.3.6'
 gem 'pg'
 
 gem 'execjs'
+gem 'geokit'
 gem 'therubyracer'
 
 # Gems used only for assets and not required
