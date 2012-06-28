@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eafdfe50-62a9-462e-8209-4f632cfb3324" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/task_states_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/task_state.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/task_states/_form.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/task_states/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/task_states/index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/task_states/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/task_states/show.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20120617171959_create_task_states.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/task_states.yml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/task_notes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/notes_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/task_statuses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/statuses_controller.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/task_note.rb" afterPath="$PROJECT_DIR$/app/models/note.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/task_status.rb" afterPath="$PROJECT_DIR$/app/models/status.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_notes/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/_form.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_notes/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/edit.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_notes/index.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/index.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_notes/new.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/new.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_notes/show.html.erb" afterPath="$PROJECT_DIR$/app/views/notes/show.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_statuses/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/statuses/_form.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_statuses/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/statuses/edit.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_statuses/index.html.erb" afterPath="$PROJECT_DIR$/app/views/statuses/index.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_statuses/new.html.erb" afterPath="$PROJECT_DIR$/app/views/statuses/new.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/task_statuses/show.html.erb" afterPath="$PROJECT_DIR$/app/views/statuses/show.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/db/migrate/20120617172120_create_task_notes.rb" afterPath="$PROJECT_DIR$/db/migrate/20120617172120_create_notes.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/db/migrate/20120617172321_create_task_statuses.rb" afterPath="$PROJECT_DIR$/db/migrate/20120617172321_create_statuses.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/fixtures/task_notes.yml" afterPath="$PROJECT_DIR$/test/fixtures/notes.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/fixtures/task_statuses.yml" afterPath="$PROJECT_DIR$/test/fixtures/statuses.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/untitled2.iml" afterPath="$PROJECT_DIR$/.idea/untitled2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/locations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/locations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/session_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/session_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/task.rb" afterPath="$PROJECT_DIR$/app/models/task.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/locations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/locations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tasks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tasks/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120609171117_create_locations.rb" afterPath="$PROJECT_DIR$/db/migrate/20120609171117_create_locations.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120617171714_create_tasks.rb" afterPath="$PROJECT_DIR$/db/migrate/20120617171714_create_tasks.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/locations.yml" afterPath="$PROJECT_DIR$/test/fixtures/locations.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/tasks.yml" afterPath="$PROJECT_DIR$/test/fixtures/tasks.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/task_notes_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/task_notes_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/task_statuses_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/task_statuses_controller_test.rb" />
     </list>
     <ignored path="untitled2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,7 +81,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/locations/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="28" selection-start="551" selection-end="551" vertical-scroll-proportion="0.8135593">
+            <state line="21" column="31" selection-start="393" selection-end="393" vertical-scroll-proportion="0.78486055">
               <folding />
             </state>
           </provider>
@@ -206,7 +159,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1860" />
-    <option name="height" value="1058" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -900,18 +853,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1860" height="1058" extended-state="6" />
+    <frame x="0" y="22" width="1860" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21799117" sideWeight="0.6316337" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21799117" sideWeight="0.4801762" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.274244" sideWeight="0.3903437" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36836627" sideWeight="0.99172187" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5198238" sideWeight="0.99172187" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1080,7 +1033,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/locations/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="551" selection-end="551" vertical-scroll-proportion="0.8135593">
+        <state line="21" column="31" selection-start="393" selection-end="393" vertical-scroll-proportion="0.78486055">
           <folding />
         </state>
       </provider>
