@@ -1,7 +1,16 @@
+class NilClass
+  def method_missing(p)
+    return nil
+  end
+end
+
 class ApplicationController < ActionController::Base
   helper :all
   helper_method :current_user_session, :current_user
   #filter_parameter_logging :password, :password_confirmation
+  layout "main"
+
+
 
   private
   def current_user_session
@@ -18,7 +27,7 @@ class ApplicationController < ActionController::Base
     unless current_user
       respond_to do |format|
         format.html {
-          flash[:notice] = "You must be logged in to access this page"
+          flash[:error] = "You must be logged in to access this page"
           redirect_to login_url
         }
         format.json { render json: {:status => 'Login required'}, status: :forbidden }
@@ -31,7 +40,7 @@ class ApplicationController < ActionController::Base
     unless (current_user && current_user.has_role?('admin'))
       respond_to do |format|
         format.html {
-          flash[:notice] = "You must be admin to access this page"
+          flash[:error] = "You must be admin to access this page"
           redirect_to login_url
         }
         format.json { render json: {:status => 'Admin required'}, status: :forbidden }

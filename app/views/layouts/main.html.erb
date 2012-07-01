@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eurosignal administration</title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <h1><a href="/">Eurosignal administration</a></h1>
+
+    <div id="user-navigation">
+      <ul class="wat-cf">
+
+        <!--<li><%= link_to "Login", login_path %></li>-->
+        <li ><%= link_to "Logout", logout_path, :class => "logout" %></li>
+
+      </ul>
+    </div>
+    <div id="main-navigation">
+      <ul class="wat-cf">
+        <li class="<%= get_controller_name == 'users' ? 'active first' : 'first'%>"><%= link_to "Users", users_path %></li>
+        <li class="<%= get_controller_name == 'tasks' ? 'active' : ''%>"><%= link_to "Tasks", tasks_path %></li>
+        <li class="<%= get_controller_name == 'locations' ? 'active' : ''%>"><%= link_to "Locations", locations_path %></li>
+
+        <!--<li><%= link_to "Notes", notes_path %></li>-->
+        <!--<li><%= link_to "Statuses", statuses_path %></li>-->
+        <!--<li><%= link_to "States", states_path %></li>-->
+        <!--<li><%= link_to "Roles", roles_path %></li>-->
+      </ul>
+    </div>
+  </div>
+  <div id="wrapper" class="wat-cf">
+    <div class="flash">
+      <% flash.each do |type, message| -%>
+          <div class="message <%= type %>">
+            <p><%= message %></p>
+          </div>
+      <% end -%>
+    </div>
+    <div id="main">
+      <div class="content">
+        <%= yield %>
+      </div>
+      <div id="footer">
+        <div class="block">
+          <p>Copyright &copy; <%= Time.now.year %> Eurosignal s.r.o.</p>
+        </div>
+      </div>
+    </div>
+    <!--<div id="sidebar">-->
+      <!--<%= yield :sidebar %>-->
+    <!--</div>-->
+  </div>
+</div>
+</body>
+</html>

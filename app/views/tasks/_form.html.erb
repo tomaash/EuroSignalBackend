@@ -1,51 +1,57 @@
-<%= form_for(@task) do |f| %>
-  <% if @task.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
-      <ul>
-      <% @task.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= f.label :state %><br />
-      <%= f.select :state_id, State.all_for_select %>
-    </div>
-
-
-  <div class="field">
-    <%= f.label :start_date %><br />
-    <%= f.datetime_select :start_date %>
+  <div class="group">
+    <%= f.label :name, t("activerecord.attributes.task.name", :default => "Name"), :class => :label %>
+    <%= f.text_field :name, :class => 'text_field' %>
+    <!--<span class="description">Ex: a simple text</span>-->
   </div>
-  <div class="field">
-    <%= f.label :due_date %><br />
-    <%= f.datetime_select :due_date %>
+
+  <div class="group">
+    <%= f.label :owner, t("activerecord.attributes.task.owner", :default => "Owner"), :class => :label %>
+    <%= f.text_field :owner, :class => 'text_field' %>
+    <span class="description">Who takes care of the task</span>
   </div>
-  <div class="field">
-    <%= f.label :owner %><br />
-    <%= f.text_field :owner %>
+
+  <div class="group">
+    <%= f.label :client, t("activerecord.attributes.task.client", :default => "Client"), :class => :label %>
+    <%= f.text_field :client, :class => 'text_field' %>
+    <span class="description">Assigned client from system</span>
   </div>
-  <div class="field">
-    <%= f.label :user %><br />
+
+  <div class="group">
+    <%= f.label :user_id, t("activerecord.attributes.task.user_id", :default => "User"), :class => :label %>
     <%= f.select :user_id, User.all_for_select %>
+    <!--<span class="description">Ex: a simple text</span>-->
   </div>
-  <div class="field">
-    <%= f.label :client %><br />
-    <%= f.text_field :client %>
+
+  <div class="group">
+    <%= f.label :start_date, t("activerecord.attributes.task.start_date", :default => "Start date"), :class => :label %>
+    <%= f.date_select :start_date, :class => 'datetime_select' %>
+    <!--<span class="description">Ex: a simple text</span>-->
   </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+
+  <div class="group">
+    <%= f.label :due_date, t("activerecord.attributes.task.due_date", :default => "Due date"), :class => :label %>
+    <%= f.date_select :due_date, :class => 'datetime_select' %>
+    <!--<span class="description">Ex: a simple text</span>-->
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+
+  <div class="group">
+    <%= f.label :state_id, t("activerecord.attributes.task.state_id", :default => "State"), :class => :label %>
+    <%= f.select :state_id, State.all_for_select %>
+    <!--<span class="description">Ex: a simple text</span>-->
   </div>
-<% end %>
+
+
+  <div class="group">
+    <%= f.label :description, t("activerecord.attributes.task.description", :default => "Description"), :class => :label %>
+    <%= f.text_area :description, :class => 'text_area', :rows => 5 %>
+    <!--<span class="description">Ex: a simple text</span>-->
+  </div>
+<div class="group navform wat-cf">
+  <button class="button" type="submit">
+    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>
+  </button>
+  <span class="text_button_padding"><%= t("web-app-theme.or", :default => "or") %></span>
+	<%= link_to t("web-app-theme.cancel", :default => "Cancel"), tasks_path, :class => "text_button_padding link_button" %>
+</div>

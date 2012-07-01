@@ -1,21 +1,46 @@
-<h1>Please login</h1>
-<%=  form_for @user_session, :url => {:action => :auth} do |f| %>
-<% if @user_session.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user_session.errors.count, "error") %> prohibited:</h2>
-    <ul>
-      <% @user_session.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<div id="box">
+  <div class="block" id="block-login">
+    <h2>Eurosignal</h2>
+    <div class="content login">
+      <% if flash.empty? %>
+      <br/>
       <% end %>
-    </ul>
-  </div>
-  <% end %>
+      <div class="flash">
+        <% flash.each do |type, message| -%>
+            <div class="message <%= type %>">
+              <p><%= message %></p>
+            </div>
+        <% end -%>
+      </div>
 
-<%= f.label :login %><br />
-  <%= f.text_field :login %><br />
-  <br />
-  <%= f.label :password %><br />
-  <%= f.password_field :password %><br />
-  <br />
-  <%= f.submit "Login" %>
-<%end%>
+      <%= form_for @user_session, :url => {:action => :auth}, :html => {:class => :form} do |f| %>
+          <div class="group wat-cf">
+            <div class="left">
+              <%= f.label :login, :class => :label %>
+            </div>
+            <div class="right">
+              <%= f.text_field :login, :class => 'text_field' %>
+            </div>
+            <!--<span class="description">Ex: a simple text</span>-->
+          </div>
+
+          <div class="group wat-cf">
+            <div class="left">
+              <%= f.label :password, :class => :label %>
+            </div>
+            <div class="right">
+              <%= f.password_field :password, :class => 'text_field' %>
+            </div>
+            <!--<span class="description">Ex: a simple text</span>-->
+          </div>
+          <div class="group navform wat-cf">
+            <div class="right">
+              <button class="button" type="submit">
+                <img src="/assets/web-app-theme/icons/tick.png" alt="Save"/> Login
+              </button>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

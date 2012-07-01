@@ -1,35 +1,63 @@
-<h1>Listing locations</h1>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", locations_path %></li>
+      <!--<li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_location_path %></li>-->
+    </ul>
+  </div>
+  <div class="content">
+    <h2 class="title"><%= t("web-app-theme.all", :default => "All") %> Locations</h2>
 
-<table>
-  <tr>
-    <th>Lat</th>
-    <th>Lng</th>
-    <th>Acc</th>
-    <th>Time</th>
-    <th>User</th>
-    <th>Task</th>
-    <th>Address</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="inner">
+      <table class="table">
+        <tr>
+          <th class="first">Lat</th>
+          <th>Lng</th>
+          <th>Acc</th>
+          <th>User</th>
+          <th>Task</th>
+          <th>Address</th>
+          <th>Time</th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <% @locations.each do |location| -%>
+            <tr class="<%= cycle("odd", "even") %>">
+              <td>
+                <%= location.lat %>
+              </td>
+              <td>
+                <%= location.lng %>
+              </td>
+              <td>
+                <%= location.acc %>
+              </td>
+              <td>
+                <%= location.user.login %>
+              </td>
+              <td>
+                <%= location.task.name %>
+              </td>
+              <td>
+                <%= location.address %>
+              </td>
+              <td>
+                <%= location.created_at %>
+              </td>
+              <td class="last">
+                <%= link_to "#{t("web-app-theme.show", :default => "Show")}", location_path(location) %>
+                <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_location_path(location) %>
+                <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", location_path(location), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+              </td>
+            </tr>
+        <% end -%>
+      </table>
+      <div class="actions-bar wat-cf">
+        <div class="actions">
+        </div>
 
-<% @locations.each do |location| %>
-  <tr>
-    <td><%= location.lat %></td>
-    <td><%= location.lng %></td>
-    <td><%= location.acc %></td>
-    <td><%= location.created_at %></td>
-    <td><%= location.user ? location.user.login : "N/A" %></td>
-    <td><%= location.task ? location.task.name : "N/A" %></td>
-    <td><%= location.address %></td>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Edit', edit_location_path(location) %></td>
-    <td><%= link_to 'Destroy', location, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br />
-
-<%= link_to 'New Location', new_location_path %>
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

@@ -1,37 +1,51 @@
-<h1>Listing tasks</h1>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", tasks_path %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_task_path %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2 class="title"><%= t("web-app-theme.all", :default => "All") %> Tasks</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>State</th>
-    <th>Start date</th>
-    <th>Due date</th>
-    <th>Owner</th>
-    <th>User</th>
-    <th>Client</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="inner">
+      <table class="table">
+        <tr>
+          <th class="first">Name</th>
+          <th>State</th>
+          <th>Start date</th>
+          <th>Due date</th>
+          <th>Owner</th>
+          <th>User</th>
+          <th>Client</th>
+          <th>Description</th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <% @tasks.each do |task| -%>
+            <tr class="<%= cycle("odd", "even") %>">
+              <td><%= task.name %></td>
+              <td><%= task.state ? task.state.name : "N/A" %></td>
+              <td><%= task.start_date %></td>
+              <td><%= task.due_date %></td>
+              <td><%= task.owner %></td>
+              <td><%= task.user ? task.user.login : "N/A" %></td>
+              <td><%= task.description %></td>
+              <td><%= task.client %></td>
+              <td class="last">
+                <%= link_to "#{t("web-app-theme.show", :default => "Show")}", task_path(task) %>
+                <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_task_path(task) %>
+                <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", task_path(task), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+              </td>
+            </tr>
+        <% end -%>
+      </table>
+      <div class="actions-bar wat-cf">
+        <div class="actions">
+        </div>
 
-<% @tasks.each do |task| %>
-  <tr>
-    <td><%= task.name %></td>
-    <td><%= task.state ? task.state.name : "N/A" %></td>
-    <td><%= task.start_date %></td>
-    <td><%= task.due_date %></td>
-    <td><%= task.owner %></td>
-    <td><%= task.user ? task.user.login : "N/A" %></td>
-    <td><%= task.client %></td>
-    <td><%= task.description %></td>
-    <td><%= link_to 'Show', task %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br />
-
-<%= link_to 'New Task', new_task_path %>
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

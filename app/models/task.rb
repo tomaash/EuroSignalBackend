@@ -6,6 +6,8 @@ class Task < ActiveRecord::Base
   has_many :notes
   has_many :locations
 
+  validates :name, :presence => true
+
   def self.all_for_select
     self.all.map{|x| [x.name, x.id]}
   end

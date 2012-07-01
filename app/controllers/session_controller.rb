@@ -1,7 +1,7 @@
 class SessionController < ApplicationController
   before_filter :require_no_user, :only => [:login, :auth]
   before_filter :require_user, :only => :logout
-
+  layout "login"
 
   def login
     @user_session = UserSession.new
@@ -48,7 +48,10 @@ class SessionController < ApplicationController
           render json: @user_session.record.to_json(:include => :current_task)
         end
       else
-        format.html { render :action => :login }
+        format.html {
+          flash[:error] = "Wrong username or password"
+          redirect_to :action => :login
+        }
         format.json { render json: @user_session.errors, status: :forbidden }
       end
     end

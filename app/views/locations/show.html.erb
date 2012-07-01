@@ -1,30 +1,54 @@
-<p id="notice"><%= notice %></p>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", locations_path  %></li>
+      <!--<li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_location_path %></li>-->
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", location_path %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="inner">
+      
+        <p>
+          <b><%= t("activerecord.attributes.location.lat", :default => t("activerecord.labels.lat", :default => "Lat")) %>:</b>
+          <%= @location.lat %>
+        </p>
 
-<p>
-  <b>Lat:</b>
-  <%= @location.lat %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.location.lng", :default => t("activerecord.labels.lng", :default => "Lng")) %>:</b>
+          <%= @location.lng %>
+        </p>
 
-<p>
-  <b>Lng:</b>
-  <%= @location.lng %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.location.acc", :default => t("activerecord.labels.acc", :default => "Acc")) %>:</b>
+          <%= @location.acc %>
+        </p>
 
-<p>
-  <b>Acc:</b>
-  <%= @location.acc %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.location.time", :default => t("activerecord.labels.time", :default => "Time")) %>:</b>
+          <%= @location.time %>
+        </p>
 
-<p>
-  <b>Time:</b>
-  <%= @location.time %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.location.user_id", :default => t("activerecord.labels.user_id", :default => "User")) %>:</b>
+          <%= @location.user_id %>
+        </p>
 
-<p>
-  <b>User:</b>
-  <%= @location.user_id %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.location.task_id", :default => t("activerecord.labels.task_id", :default => "Task")) %>:</b>
+          <%= @location.task_id %>
+        </p>
 
+        <p>
+          <b><%= t("activerecord.attributes.location.address", :default => t("activerecord.labels.address", :default => "Address")) %>:</b>
+          <%= @location.address %>
+        </p>
+      <div class="wat-cf">
+        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_location_path(@location), :class => "button" %>
+        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), location_path(@location), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

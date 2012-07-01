@@ -28,6 +28,8 @@ gem 'jquery-rails'
 
 gem 'authlogic'
 
+gem 'web-app-theme', :git =>'git://github.com/pilu/web-app-theme.git'
+
 group :development do
   gem 'unicorn'
 end

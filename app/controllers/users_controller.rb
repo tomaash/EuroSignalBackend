@@ -1,6 +1,6 @@
 
 class UsersController < ApplicationController
-  #before_filter :require_user
+  before_filter :require_user
 
   # GET /users
   # GET /users.json
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to users_path, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
