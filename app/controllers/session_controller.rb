@@ -27,7 +27,7 @@ class SessionController < ApplicationController
         redirect_back_or_default login_path
       }
       format.json {
-        reset_token(current_user)
+        # reset_token(current_user)
         render json: {:status => 'Logged out'}, status: :ok
       }
     end
@@ -44,7 +44,7 @@ class SessionController < ApplicationController
         }
 
         format.json do
-          reset_token(@user_session.record)
+          # reset_token(@user_session.record)
           render json: @user_session.record.to_json(:include => :current_task)
         end
       else
